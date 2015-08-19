@@ -1,0 +1,5 @@
+package com.serefacet.concurrency.racecondition;
+
+public class UseCounter implements Runnable{
+
+}

@@ -1,0 +1,6 @@
+package com.serefacet.multithreading.states;
+
+public class ThreadState extends Thread {
+	
+
+}

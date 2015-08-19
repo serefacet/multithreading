@@ -1,0 +1,9 @@
+package com.serefacet.multithreading;
+
+public class FirstThread extends Thread{
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	super.run();
+}
+}

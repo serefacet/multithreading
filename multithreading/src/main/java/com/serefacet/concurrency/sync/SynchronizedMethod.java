@@ -1,14 +1,46 @@
 package com.serefacet.concurrency.sync;
 
 /**
- * An entire method can be declared synchronized. In that case, when the method declared as synchronized
- * is called, a lock is obtained on the object on which the method is called ,and it is released when
- * the method returns to the caller.
+ * An entire method can be declared synchronized. In that case, when the method
+ * declared as synchronized is called, a lock is obtained on the object on which
+ * the method is called ,and it is released when the method returns to the
+ * caller.
  * 
  * 
  * @author seref
  *
  */
 public class SynchronizedMethod {
+
+	private int val;
+
+	/**
+	 * Now the assign() method is a synchronized method. If you call the
+	 * assign() method, it will acquire the lock on the this reference
+	 * implicitly and then execute the statement val = i;. What happens if some
+	 * other thread acquired the lock already? Just like synchronized blocks, if
+	 * the thread cannot get the lock, it will be blocked and the thread will
+	 * wait until the lock becomes available.
+	 * 
+	 * @param i
+	 */
+	public synchronized void assign(int i) {
+		val = i;
+	}
+
+	/**
+	 * This method equals with the above part.
+	 * 
+	 * @param i
+	 */
+	public void assignBlock(int i) {
+		
+		synchronized (this) {
+			val = i;
+		}
+		
+	}
+	
+	
 
 }

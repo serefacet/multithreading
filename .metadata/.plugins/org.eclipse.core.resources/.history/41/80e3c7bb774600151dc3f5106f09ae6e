@@ -1,0 +1,6 @@
+package com.serefacet.concurrency.deadlock;
+
+public class DeadlockTest {
+
+	public static long balls = 0 ;
+}

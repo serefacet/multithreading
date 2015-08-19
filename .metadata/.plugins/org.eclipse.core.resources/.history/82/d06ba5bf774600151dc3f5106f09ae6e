@@ -1,0 +1,8 @@
+package com.serefacet.concurrency.deadlock;
+
+public class DeadlockTest {
+
+	class Balls{
+		
+	}
+}

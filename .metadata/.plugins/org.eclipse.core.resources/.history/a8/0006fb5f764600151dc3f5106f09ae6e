@@ -1,0 +1,11 @@
+package com.serefacet.concurrency.racecondition;
+
+public class DataRaceStatic implements Runnable{
+
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

@@ -1,0 +1,5 @@
+package com.serefacet.multithreading;
+
+public class FirstThread extends Thread{
+
+}

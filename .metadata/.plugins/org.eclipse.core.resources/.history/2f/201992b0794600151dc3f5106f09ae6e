@@ -1,0 +1,26 @@
+package com.serefacet.concurrency.deadlock;
+
+public class DeadlockTest {
+
+	static class Balls {
+		public static long balls = 0;
+	}
+
+	static class Runs {
+		public static long runs = 0;
+	}
+	
+	class Counter implements Runnable{
+
+		public void run() {
+			incrementBallAfterRun();
+			incrementRunAfterBall();
+		}
+
+		private void incrementBallAfterRun() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+}

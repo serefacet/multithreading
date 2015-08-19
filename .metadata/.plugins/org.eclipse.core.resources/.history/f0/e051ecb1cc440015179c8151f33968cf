@@ -1,0 +1,11 @@
+package com.serefacet.multithreading;
+
+public class FirstThread extends Thread {
+	
+	
+	
+	@Override
+	public void run() {
+		super.run();
+	}
+}

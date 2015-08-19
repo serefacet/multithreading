@@ -1,0 +1,15 @@
+package com.serefacet.multithreading;
+
+public class FirstThread extends Thread {
+	
+	@Override
+	public void run() {
+		System.out.println("In run method; thread name is " + getName());
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

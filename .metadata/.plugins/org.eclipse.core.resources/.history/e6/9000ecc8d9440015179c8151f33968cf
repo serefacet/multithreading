@@ -1,0 +1,10 @@
+package com.serefacet.concurrency.sync;
+
+/**
+ * 
+ * @author seref
+ *
+ */
+public class SynchronizedMethod {
+
+}

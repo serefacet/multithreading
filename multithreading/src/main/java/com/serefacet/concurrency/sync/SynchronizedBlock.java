@@ -16,6 +16,12 @@ import com.serefacet.concurrency.racecondition.Counter;
  */
 public class SynchronizedBlock {
 
+	/**
+	 * Beginners commonly misunderstand that a synchronized block obtains a lock
+	 * for a block of code. Actually, the lock is obtained for an object and not
+	 * for a piece of code. The obtained lock is held until all the statements
+	 * in that block complete execution.
+	 **/
 	public void increment() {
 
 		// code segment guarded by the mutex lock

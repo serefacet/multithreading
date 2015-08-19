@@ -1,0 +1,7 @@
+package com.serefacet.concurrency.sync;
+
+public class StaticSynchronizedMethod {
+
+	
+	private static int staticVal;
+}

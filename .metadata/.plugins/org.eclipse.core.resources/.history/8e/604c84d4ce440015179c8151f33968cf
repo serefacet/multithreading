@@ -1,0 +1,16 @@
+package com.serefacet.multithreading;
+
+public class ThreadProperties {
+	
+	public static void main(String[] args) {
+		
+		Thread t = new Thread();
+		
+		
+		/**
+		 * Thread toString() method prints the threadName,threadPriority,thread Group
+		 */
+		System.out.println(t);
+	}
+
+}

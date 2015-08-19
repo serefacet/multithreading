@@ -1,0 +1,16 @@
+package com.serefacet.concurrency.racecondition;
+
+/**
+ * 
+ * Threads share same memory and they concurrently modify the data.Since the modification can be done
+ * at the same time without safeguards,this can lead to unintuitive results.
+ * 
+ * Race condition means same as data race , race hazard.
+ * @author seref
+ *
+ */
+public class DataRace {
+	
+
+	
+}

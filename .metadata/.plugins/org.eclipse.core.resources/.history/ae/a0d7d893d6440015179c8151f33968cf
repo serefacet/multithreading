@@ -1,0 +1,9 @@
+package com.serefacet.multithreading.states;
+/**
+ * 
+ * @author seref
+ *
+ */
+public class ThreadRunnableState {
+
+}

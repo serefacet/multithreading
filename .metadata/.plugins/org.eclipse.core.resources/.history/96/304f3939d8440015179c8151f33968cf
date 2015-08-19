@@ -1,0 +1,33 @@
+package com.serefacet.concurrency.racecondition;
+
+/**
+ * 
+ * Threads share same memory and they concurrently modify the data.Since the modification can be done
+ * at the same time without safeguards,this can lead to unintuitive results.
+ * 
+ * Race condition means same as data race , race hazard.
+ * 
+ * 
+ * Problem : When three threads execute,each of them has a local copy of the value Counter.count and
+ * when they update the counter with Counter.count++, they need not immediately 
+ * reflect that value in the main memory.
+ * 
+ * 
+ *
+ */
+public class DataRace {
+	
+
+	public static void main(String[] args) {
+		UseCounter c = new UseCounter();
+		
+		Thread t1 = new Thread(c);
+		Thread t2 = new Thread(c);
+		Thread t3 = new Thread(c);
+		
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+	
+}

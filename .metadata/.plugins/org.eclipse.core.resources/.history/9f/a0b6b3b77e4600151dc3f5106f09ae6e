@@ -1,0 +1,47 @@
+package com.serefacet.concurrency.racecondition;
+
+/**
+ * 
+ * Threads share same memory and they concurrently modify the data.Since the modification can be done
+ * at the same time without safeguards,this can lead to unintuitive results.
+ * 
+ * Race condition means same as data race , race hazard.
+ * 
+ * 
+ * Problem : When three threads execute,each of them has a local copy of the value Counter.count and
+ * when they update the counter with Counter.count++, they need not immediately 
+ * reflect that value in the main memory.In the next read operation of Counter.count, the local value
+ * of Counter.count is printed.
+ * 
+ * Therefore, this program has a datarace problem. To avoid this problem, you need to ensure that a single
+ * thread does the write and read operations together(atomically). The section of code that is commonly
+ * accessed and modified by more than one thread is known as critical section. To avoid the data race problem,
+ * you need to ensure that the critical section is executed by only one thread at a time.
+ * 
+ * Solution : By acquiring a lock on the object. Only a single thread can acquire a lock on an object
+ * at a time, and only that thread can execute the block of code (critical section) protected by
+ * the lock.Until then, the other threads have to wait. Internally, this is implemented with monitors
+ * and the process is called locking and unlocking (i.e. thread synchronization)
+ * 
+ *
+ */
+public class DataRace {
+	
+
+	public static void main(String[] args) {
+		UseCounter c = new UseCounter();
+		
+		Thread t1 = new Thread(c);
+		Thread t2 = new Thread(c);
+		Thread t3 = new Thread(c);
+		
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+	
+	public DataRace() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

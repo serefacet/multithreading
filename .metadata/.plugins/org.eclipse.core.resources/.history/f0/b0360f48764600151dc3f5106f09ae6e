@@ -1,0 +1,6 @@
+package com.serefacet.concurrency.racecondition;
+
+public class DataRaceStatic {
+
+	
+}

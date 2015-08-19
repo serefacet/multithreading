@@ -1,0 +1,9 @@
+package com.serefacet.multithreading;
+
+public class ThreadProperties {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

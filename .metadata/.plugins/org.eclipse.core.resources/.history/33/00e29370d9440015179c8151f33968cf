@@ -1,0 +1,19 @@
+package com.serefacet.concurrency.sync;
+
+
+/**
+ * we can use sychronized block only with reference types in java.
+ * 
+ * We can not use with primitive types.
+ * 
+ * Even if there is an exception in synchronized block , the JVM releases the lock. No matter how the 
+ * program execution terminates.
+ * 
+ * 
+ * @author seref
+ *
+ */
+public class ThreadSynchronization {
+
+	
+}

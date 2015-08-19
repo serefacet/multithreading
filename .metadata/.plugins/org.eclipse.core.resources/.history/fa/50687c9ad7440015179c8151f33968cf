@@ -1,0 +1,12 @@
+package com.serefacet.concurrency.racecondition;
+
+public class UseCounter implements Runnable{
+
+	public void run() {
+
+		Counter.count++;
+		
+		System.out.println(Counter.count + " ");
+	}
+
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="com.serefacet.multithreading.FirstThread"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.serefacet.multithreading.TimeBomb"/>
+<fullyQualifiedTypeName name="com.serefacet.multithreading.AsyncThread"/>
+<fullyQualifiedTypeName name="com.serefacet.concurrency.racecondition.UseCounter"/>
+</qualifiedTypeNameHistroy>

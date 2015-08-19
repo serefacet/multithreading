@@ -1,0 +1,15 @@
+package com.serefacet.concurrency.racecondition;
+
+public class DataRaceStatic implements Runnable{
+
+	public static void increment(){
+		Counter.count++;
+		System.out.println(Counter.count + " ");
+	}
+	
+	public void run() {
+		
+	}
+	
+
+}

@@ -1,0 +1,59 @@
+package com.serefacet.concurrency.deadlock;
+
+public class DeadlockTest {
+
+	static class Balls {
+		public static long balls = 0;
+	}
+
+	static class Runs {
+		public static long runs = 0;
+	}
+	
+	static class Counter implements Runnable{
+
+		public void run() {
+			incrementBallAfterRun();
+			incrementRunAfterBall();
+		}
+
+		private void incrementRunAfterBall() {
+			synchronized (Balls.class) {
+				synchronized (Runs.class) {
+					Balls.balls++;
+					Runs.runs++;
+				}
+				
+			}
+		}
+
+		private void incrementBallAfterRun() {
+			synchronized (Runs.class) {
+				synchronized (Balls.class) {
+					Runs.runs++;
+					Balls.balls++;
+				}
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		@SuppressWarnings("unused")
+		Counter counter = new DeadlockTest.Counter();
+		
+		Thread t1 = new Thread(counter);
+		Thread t2 = new Thread(counter);
+		
+		t1.start();
+		t2.start();
+		
+		System.out.println("Waiting for threads to complete execution ...");
+		
+		t2.join();
+		t2.join();
+		
+		System.out.println("Done");
+	}
+}

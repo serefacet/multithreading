@@ -1,0 +1,10 @@
+package com.serefacet.multithreading.states;
+
+public class ThreadState extends Thread {
+	
+
+	
+	public static void main(String[] args) {
+		
+	}
+}
